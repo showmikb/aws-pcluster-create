@@ -1,6 +1,11 @@
 pipeline
 {
 agent any
+environment
+  {
+    PATH='/sbin:/bin:/usr/sbin:/usr/bin:/home/ec2-user/.local/bin'
+  }  
+
   stages
   {
     stage('Clone Repo')
