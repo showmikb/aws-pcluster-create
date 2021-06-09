@@ -9,7 +9,7 @@ agent any
     {
       steps
       {
-        echo "hello world"
+        sh 'echo hello'
         sh 'ls -larth'
       }
     }
