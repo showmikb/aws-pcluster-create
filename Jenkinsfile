@@ -8,7 +8,8 @@ agent any
     {
       steps
       {
-        git 'https://github.com/showmikb/aws-pcluster-create.git'
+        sh '$pwd'
+        sh 'git clone https://github.com/showmikb/aws-pcluster-create.git'
       }
     } 
     stage('Run the Config file')
