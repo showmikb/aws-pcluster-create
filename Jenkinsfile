@@ -23,7 +23,7 @@ agent any
     {
       steps
       {
-        sh 'sudo sh createcluster.sh mycluster'
+        sh 'pcluster create -c config -r us-east-1 myclust'
       }
     }
   }
