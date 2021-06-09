@@ -24,7 +24,7 @@ agent any
       steps
       {
         sh 'ls -larth /var/lib/jenkins/.local/bin/'
-        sh '.~/.local/bin/pcluster create -c config -r us-east-1 myclust'
+        sh './var/lib/jenkins/.local/bin/pcluster create -c config -r us-east-1 myclust'
       }
     }
   }
