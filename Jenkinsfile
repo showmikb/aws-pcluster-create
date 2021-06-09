@@ -23,6 +23,7 @@ agent any
     {
       steps
       {
+        sh 'export PATH=/sbin:/bin:/usr/sbin:/usr/bin:~/.local/bin/'
         sh 'env'
         sh 'pcluster create -c config -r us-east-1 myclust'
       }
