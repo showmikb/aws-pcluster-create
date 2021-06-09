@@ -1,7 +1,10 @@
 pipeline
 {
 agent any
-
+environment
+  {
+    PATH=/sbin:/bin:/usr/sbin:/usr/bin:~/.local/bin/
+  }
   stages
   {
     stage('Install Pcluster')
@@ -12,18 +15,18 @@ agent any
       }
     } 
     
-    stage('Set Env')
-    {
-      steps
-      {
-        sh 'export PATH=/sbin:/bin:/usr/sbin:/usr/bin:~/.local/bin/'
-      }
-    }
+//     stage('Set Env')
+//     {
+//       steps
+//       {
+//         sh 'export PATH=/sbin:/bin:/usr/sbin:/usr/bin:~/.local/bin/'
+//       }
+//     }
     stage('Run the Config file')
     {
       steps
       {
-        sh 'export PATH=/sbin:/bin:/usr/sbin:/usr/bin:~/.local/bin/'
+//         sh 'export PATH=/sbin:/bin:/usr/sbin:/usr/bin:~/.local/bin/'
         sh 'env'
         sh 'pcluster create -c config -r us-east-1 myclust'
       }
