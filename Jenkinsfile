@@ -3,7 +3,7 @@ pipeline
 agent any
 environment
   {
-    PATH=/sbin:/bin:/usr/sbin:/usr/bin:~/.local/bin/
+    PATH='/sbin:/bin:/usr/sbin:/usr/bin:~/.local/bin/'
   }
   stages
   {
