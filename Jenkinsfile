@@ -7,7 +7,7 @@ environment
   }
   stages
   {
-    stage('Install Pcluster')
+    stage('Install Pcluster if not present')
     {
       steps
       {
@@ -15,19 +15,11 @@ environment
       }
     } 
     
-//     stage('Set Env')
-//     {
-//       steps
-//       {
-//         sh 'export PATH=/sbin:/bin:/usr/sbin:/usr/bin:~/.local/bin/'
-//       }
-//     }
-    stage('Run the Config file')
+
+    stage('Create Cluster with the Config file')
     {
       steps
       {
-//         sh 'export PATH=/sbin:/bin:/usr/sbin:/usr/bin:~/.local/bin/'
-        sh 'env'
         sh 'pcluster create -c config -r us-east-1 myclust'
       }
     }
