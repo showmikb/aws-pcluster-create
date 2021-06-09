@@ -1,0 +1,24 @@
+[aws]
+aws_region_name = us-east-1
+
+[aliases]
+ssh = ssh {CFN_USER}@{MASTER_IP} {ARGS}
+
+[global]
+cluster_template = default
+update_check = true
+sanity_check = true
+
+[cluster default]
+key_name = divine-showmik
+scheduler = sge
+master_instance_type = t2.micro
+base_os = centos7
+vpc_settings = default
+compute_instance_type = t2.micro
+max_queue_size = 5
+
+[vpc default]
+vpc_id = vpc-052882e14233a90f6
+master_subnet_id = subnet-09c4904ec15ad211a
+compute_subnet_id = subnet-0ac4e3dedb5765b71
