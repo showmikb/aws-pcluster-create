@@ -7,7 +7,7 @@ agent any
     {
       steps
       {
-       git 'https://github.com/showmikb/aws-pcluster-create.git'
+       sh 'ls -alrth'
       }
     } 
     stage('Run the Config file')
