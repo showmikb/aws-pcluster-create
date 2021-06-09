@@ -14,7 +14,7 @@ agent any
     {
       steps
       {
-        sh 'sudo createcluster.sh mycluster'
+        sh 'sudo sh createcluster.sh mycluster'
       }
     }
   }
