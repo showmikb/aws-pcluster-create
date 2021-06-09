@@ -12,7 +12,7 @@ environment
     {
       steps
       {
-       sh 'ls -alrth'
+       sh 'env'
       }
     } 
     stage('Run the Config file')
