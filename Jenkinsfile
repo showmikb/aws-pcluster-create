@@ -16,11 +16,23 @@ environment
     } 
     
 
-    stage('Create Cluster with the Config file')
+    stage('Create or Update Cluster with the Config file')
     {
       steps
       {
-        sh 'pcluster update -c config myclust -y'
+        script 
+        {
+            try 
+            {
+                sh 'pcluster create -c config myclust -y'
+            } 
+            catch (Exception e) 
+            {
+                echo 'Exception occurred: ' + e.toString()
+                sh 'pcluster update -c config myclust -y'
+            }
+        }
+        
       }
     }
   }
