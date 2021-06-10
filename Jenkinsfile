@@ -20,7 +20,7 @@ environment
     {
       steps
       {
-        sh 'pcluster create -c config myclust'
+        sh 'pcluster update -c config myclust'
       }
     }
   }
