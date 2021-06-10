@@ -24,12 +24,12 @@ environment
         {
             try 
             {
-                sh 'pcluster create -c config divinescluster'
+                sh 'pcluster create -c config tesla'
             } 
             catch (Exception e) 
             {
                 echo 'Exception occurred: ' + e.toString()
-                sh 'pcluster update -c config divinescluster -y'
+                sh 'pcluster update -c config tesla -y'
             }
         }
         
