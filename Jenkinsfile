@@ -24,7 +24,7 @@ environment
         {
             try 
             {
-                sh 'pcluster create -c config myclust -y'
+                sh 'pcluster create -c config myclust'
             } 
             catch (Exception e) 
             {
