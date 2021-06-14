@@ -12,7 +12,7 @@ environment
       steps
       {
         environment {
-                GIT_COMMIT_ID=''
+                GIT_COMMIT_ID="NA"
             }
 
         script{
