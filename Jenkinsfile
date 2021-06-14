@@ -33,7 +33,7 @@ environment
             echo "The value is \$GIT_COMMIT_ID"
             FILE_NAME=`git diff-tree --no-commit-id --name-only -r \$GIT_COMMIT_ID`
             echo "\$FILE_NAME"
-            pcluster create -c config $(FILE_NAME)
+            pcluster create -c config \$FILE_NAME
             """
               
             } 
