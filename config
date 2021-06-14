@@ -22,3 +22,5 @@ max_queue_size = 4
 vpc_id = vpc-052882e14233a90f6
 master_subnet_id = subnet-09c4904ec15ad211a
 compute_subnet_id = subnet-0ac4e3dedb5765b71
+
+
