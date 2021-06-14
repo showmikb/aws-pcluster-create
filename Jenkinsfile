@@ -20,6 +20,7 @@ environment
             GIT_COMMIT_ID=`git rev-parse HEAD`
             echo "The value is \$GIT_COMMIT_ID"
             FILE_NAME=`git diff-tree --no-commit-id --name-only -r \$GIT_COMMIT_ID`
+            echo "\$FILE_NAME"
             """
         }
       }
