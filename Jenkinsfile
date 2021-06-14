@@ -11,15 +11,17 @@ environment
     {
       steps
       {
-        environment {
-                GIT_COMMIT_ID="NA"
-            }
+
 
         script{
        sh 'pip-3.7 install aws-parallelcluster==2.10.2 --user'
-        env.GIT_COMMIT_ID =  sh ' git rev-parse HEAD'
-        sh ' echo ${env.GIT_COMMIT_ID}'
-         sh 'git diff-tree --no-commit-id --name-only -r ${env.GIT_COMMIT_ID}'
+        
+          sh """#!/bin/bash
+            GIT_COMMIT_ID = git rev-parse HEAD
+            echo "The value is \$GIT_COMMIT_ID"
+        """
+        
+         sh 'git diff-tree --no-commit-id --name-only -r \$GIT_COMMIT_ID'
         }
       }
     } 
