@@ -19,9 +19,10 @@ environment
           sh """#!/bin/bash
             GIT_COMMIT_ID=`git rev-parse HEAD`
             echo "The value is \$GIT_COMMIT_ID"
-        """
+     
         
-         sh 'git diff-tree --no-commit-id --name-only -r \$GIT_COMMIT_ID'
+       `git diff-tree --no-commit-id --name-only -r \$GIT_COMMIT_ID`
+            """
         }
       }
     } 
