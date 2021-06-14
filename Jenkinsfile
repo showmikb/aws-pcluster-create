@@ -24,6 +24,7 @@ environment
         {
             try 
             {
+              
                 sh 'pcluster create -c config tesla'
             } 
             catch (Exception e) 
