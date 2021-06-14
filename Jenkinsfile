@@ -24,7 +24,7 @@ environment
         {
             try 
             {
-                sh 'echo %GIT_COMMIT%'
+                sh 'echo  ${env.GIT_COMMIT}'
                 sh 'pcluster create -c config tesla'
             } 
             catch (Exception e) 
