@@ -17,7 +17,7 @@ environment
        sh 'pip-3.7 install aws-parallelcluster==2.10.2 --user'
         
           sh """#!/bin/bash
-            GIT_COMMIT_ID = git rev-parse HEAD
+            GIT_COMMIT_ID = `git rev-parse HEAD`
             echo "The value is \$GIT_COMMIT_ID"
         """
         
