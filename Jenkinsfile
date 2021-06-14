@@ -40,7 +40,13 @@ environment
             catch (Exception e) 
             {
                 echo 'Exception occurred: ' + e.toString()
-                sh 'pcluster update -c config tesla -y'
+                  sh """#!/bin/bash
+            GIT_COMMIT_ID=`git rev-parse HEAD`
+            echo "The value is \$GIT_COMMIT_ID"
+            FILE_NAME=`git diff-tree --no-commit-id --name-only -r \$GIT_COMMIT_ID`
+            echo "\$FILE_NAME"
+            pcluster update -c config \$FILE_NAME
+            """
             }
         }
         
