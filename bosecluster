@@ -16,7 +16,7 @@ master_instance_type = t2.small
 base_os = centos7
 vpc_settings = default
 compute_instance_type = t2.micro
-max_queue_size = 4
+max_queue_size = 5
 
 [vpc default]
 vpc_id = vpc-052882e14233a90f6
